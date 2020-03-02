@@ -4,9 +4,8 @@ s = socket.socket(socket.AF_INET,socket.SOCK_STREAM,socket.IPPROTO_TCP)
 
 s.connect((tcp_ip,23))
 
-
-
-msg = s.recv(500)
-print(msg.decode("ascii"))
+while True:
+ msg = s.recv(500)
+ print(msg.decode("ascii"))
 
  
